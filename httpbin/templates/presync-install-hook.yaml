@@ -17,4 +17,4 @@ spec:
           command:
             - sh
             - -c
-            - echo "hello world" && sleep 15
+            - echo "hello world" && sleep 3
