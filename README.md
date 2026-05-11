@@ -16,7 +16,7 @@ This repo intends to reproduce the bug in ArgoCD 3.4.1 where Sync hooks do not t
 
 Expected Behavior (tested with ArgoCD 3.3.9 and 3.2.5)
 
-![workingdemo](https://cdn.zappy.app/72f38b983b7f004befbf9fb4c421fb43.gif)
+<img width="1568" height="800" alt="Image" src="https://github.com/user-attachments/assets/cfb450dc-eabc-4433-a55a-acb31f767fb0" />
 
 Broken Behavior (tested with ArgoCD 3.4.1)
 
