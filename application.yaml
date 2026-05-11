@@ -1,0 +1,21 @@
+# Can apply with kubectl apply --namespace argocd -f application.yaml
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sync-window-trigger-bug-reproduction
+  namespace: default
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  revisionHistoryLimit: 7
+  source:
+    path: httpbin
+    repoURL: https://github.com/ahinh43/argocd-sync-hooks-trigger-bug.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

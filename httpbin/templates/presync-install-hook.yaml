@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: httpbin-presync-install
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+spec:
+  template:
+    metadata:
+      name: httpbin-presync-install
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: presync
+          image: busybox
+          command:
+            - sh
+            - -c
+            - echo "hello world" && sleep 15

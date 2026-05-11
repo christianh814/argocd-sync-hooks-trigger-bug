@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: httpbin-postsync-install
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+spec:
+  template:
+    metadata:
+      name: httpbin-postsync-install
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: postsync
+          image: busybox
+          command:
+            - sh
+            - -c
+            - echo "hello world" && sleep 15
