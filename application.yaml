@@ -13,7 +13,7 @@ spec:
   revisionHistoryLimit: 7
   source:
     path: httpbin
-    repoURL: https://github.com/ahinh43/argocd-sync-hooks-trigger-bug.git
+    repoURL: https://github.com/christianh814/argocd-sync-hooks-trigger-bug
     targetRevision: HEAD
   syncPolicy:
     automated:
