@@ -4,7 +4,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: sync-window-trigger-bug-reproduction
-  namespace: default
+  namespace: argocd
 spec:
   destination:
     namespace: default
